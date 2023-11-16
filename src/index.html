@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="https://github.com/anmutech" />
+    <title>InfluxDB Query2CSV</title>
+    <link rel="stylesheet" href="bulma.min.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="field">
+          <label class="label" for="url">InfluxDB URL</label>
+          <input
+            class="input"
+            type="text"
+            id="url"
+            placeholder="http://[YOUR_IP_ADDRESS OR YOUR_DOMAIN]:[YOUR_PORT] or https://[YOUR_IP_ADDRESS OR YOUR_DOMAIN]:[YOUR_PORT]"
+          />
+        </div>
+        <div class="field">
+          <label class="label" for="org">InfluxDB ORG</label>
+          <input class="input" type="text" id="org" />
+        </div>
+        <div class="field">
+          <label class="label" for="token">InfluxDB API Token</label>
+          <input class="input" type="text" id="token" />
+        </div>
+        <div class="field">
+          <label class="label" for="fluxQuery">Flux Query</label>
+          <textarea class="textarea" id="fluxQuery" rows="10"></textarea>
+          <button class="button" id="fluxQuerySubmit">Submit Query</button>
+        </div>
+        <div class="field">
+          <label class="label" for="csv">Response</label>
+          <textarea class="textarea" id="csv" rows="10"></textarea>
+        </div>
+        <div class="field">
+          <label class="label" for="filename">Filename</label>
+          <input
+            class="input is-three-quarters"
+            type="text"
+            id="filename"
+            value="influxDBData.csv"
+          />
+          <button class="button" id="csvDownload">Download</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
